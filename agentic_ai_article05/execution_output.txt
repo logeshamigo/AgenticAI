@@ -1,0 +1,9 @@
+extract: rejected small_structured (Revenue must be integers)
+extract: rejected general_structured (Evidence mismatch: q2)
+extract: transient general_backup attempt 1/2 (Simulated provider timeout)
+extract: accepted general_backup
+interpret: accepted reasoning
+summarize: rejected general (Unsupported percentage in summary)
+summarize: accepted general_backup
+Decision Controller: completed (-8.0%)
+Net revenue decreased 8.0%; cause not established.

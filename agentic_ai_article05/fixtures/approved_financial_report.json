@@ -1,0 +1,11 @@
+{
+  "report_id": "quarterly-revenue-FY2026",
+  "account_id": "finance-research",
+  "source": "approved_warehouse",
+  "metric": "net_revenue",
+  "fiscal_period": "FY2026-Q1_to_FY2026-Q2",
+  "currency": "USD",
+  "unit": "thousands",
+  "q1": 1000,
+  "q2": 920
+}

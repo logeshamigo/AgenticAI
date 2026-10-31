@@ -1,0 +1,47 @@
+test_application_bug_is_not_blamed_on_models (test_model_router.RouterTests.test_application_bug_is_not_blamed_on_models) ... ok
+test_approved_interpretation_accepted (test_model_router.RouterTests.test_approved_interpretation_accepted) ... ok
+test_audit_trail_is_returned (test_model_router.RouterTests.test_audit_trail_is_returned) ... ok
+test_authorized_record_is_loaded_from_independent_source (test_model_router.RouterTests.test_authorized_record_is_loaded_from_independent_source) ... ok
+test_bad_extraction_type (test_model_router.RouterTests.test_bad_extraction_type) ... ok
+test_blank_or_missing_context_size_fails_closed (test_model_router.RouterTests.test_blank_or_missing_context_size_fails_closed) ... ok
+test_blocked_state_names_next_action (test_model_router.RouterTests.test_blocked_state_names_next_action) ... ok
+test_boolean_rejected_as_int (test_model_router.RouterTests.test_boolean_rejected_as_int) ... ok
+test_causal_interpretation_rejected (test_model_router.RouterTests.test_causal_interpretation_rejected) ... ok
+test_correct_extract (test_model_router.RouterTests.test_correct_extract) ... ok
+test_evasive_causal_phrasings_rejected (test_model_router.RouterTests.test_evasive_causal_phrasings_rejected) ... ok
+test_exhausted_chain (test_model_router.RouterTests.test_exhausted_chain) ... ok
+test_exhausted_chain_goes_to_controller (test_model_router.RouterTests.test_exhausted_chain_goes_to_controller) ... ok
+test_fallback_on_summarize_not_only_extract (test_model_router.RouterTests.test_fallback_on_summarize_not_only_extract) ... ok
+test_full_run (test_model_router.RouterTests.test_full_run) ... ok
+test_growth_and_flat_wording (test_model_router.RouterTests.test_growth_and_flat_wording) ... ok
+test_ineligible_route_entry_is_never_invoked (test_model_router.RouterTests.test_ineligible_route_entry_is_never_invoked) ... ok
+test_missing_data_class_fails_closed (test_model_router.RouterTests.test_missing_data_class_fails_closed) ... ok
+test_missing_or_extra_fields (test_model_router.RouterTests.test_missing_or_extra_fields) ... ok
+test_missing_policy_input_reaches_controller_as_blocked (test_model_router.RouterTests.test_missing_policy_input_reaches_controller_as_blocked) ... ok
+test_no_eligible_model (test_model_router.RouterTests.test_no_eligible_model) ... ok
+test_only_approved_wording_is_accepted (test_model_router.RouterTests.test_only_approved_wording_is_accepted) ... ok
+test_policy_filter_capability_context_latency_and_quality (test_model_router.RouterTests.test_policy_filter_capability_context_latency_and_quality) ... ok
+test_policy_filter_data_class (test_model_router.RouterTests.test_policy_filter_data_class) ... ok
+test_policy_violation_goes_to_controller (test_model_router.RouterTests.test_policy_violation_goes_to_controller) ... ok
+test_router_failures_are_not_runtime_errors (test_model_router.RouterTests.test_router_failures_are_not_runtime_errors) ... ok
+test_schema_valid_but_wrong_q2 (test_model_router.RouterTests.test_schema_valid_but_wrong_q2) ... ok
+test_spelled_out_percent_is_counted (test_model_router.RouterTests.test_spelled_out_percent_is_counted) ... ok
+test_successful_good_summary (test_model_router.RouterTests.test_successful_good_summary) ... ok
+test_transient_is_retried_only_twice (test_model_router.RouterTests.test_transient_is_retried_only_twice) ... ok
+test_unexpected_runtime_error_is_not_a_blocked_result (test_model_router.RouterTests.test_unexpected_runtime_error_is_not_a_blocked_result) ... ok
+test_unverified_causal_claim_in_prose (test_model_router.RouterTests.test_unverified_causal_claim_in_prose) ... ok
+test_unverified_cause_remains_unverified (test_model_router.RouterTests.test_unverified_cause_remains_unverified) ... ok
+test_wrong_account_blocked_without_fallback (test_model_router.RouterTests.test_wrong_account_blocked_without_fallback) ... ok
+test_wrong_currency (test_model_router.RouterTests.test_wrong_currency) ... ok
+test_wrong_fiscal_period (test_model_router.RouterTests.test_wrong_fiscal_period) ... ok
+test_wrong_metric (test_model_router.RouterTests.test_wrong_metric) ... ok
+test_wrong_report_or_source (test_model_router.RouterTests.test_wrong_report_or_source) ... ok
+test_wrong_summary_direction (test_model_router.RouterTests.test_wrong_summary_direction) ... ok
+test_wrong_summary_numeric_field (test_model_router.RouterTests.test_wrong_summary_numeric_field) ... ok
+test_wrong_summary_prose_percentage (test_model_router.RouterTests.test_wrong_summary_prose_percentage) ... ok
+test_wrong_unit (test_model_router.RouterTests.test_wrong_unit) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.026s
+
+OK
