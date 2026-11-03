@@ -1,0 +1,57 @@
+test_exact_counter (test_builder.RenderTests.test_exact_counter) ... ok
+test_excluded_other_tenant_id_does_not_leak (test_builder.RenderTests.test_excluded_other_tenant_id_does_not_leak) ... ok
+test_excluded_unverified_id_does_not_leak (test_builder.RenderTests.test_excluded_unverified_id_does_not_leak) ... ok
+test_hypotheses_not_promoted (test_builder.RenderTests.test_hypotheses_not_promoted) ... ok
+test_injection_kept_in_untrusted_data (test_builder.RenderTests.test_injection_kept_in_untrusted_data) ... ok
+test_invalid_budget (test_builder.RenderTests.test_invalid_budget) ... ok
+test_invalid_counter_negative (test_builder.RenderTests.test_invalid_counter_negative) ... ok
+test_invalid_counter_value (test_builder.RenderTests.test_invalid_counter_value) ... ok
+test_missing_period_exposed_as_non_sensitive_status (test_builder.RenderTests.test_missing_period_exposed_as_non_sensitive_status) ... ok
+test_missing_required_id_does_not_leak (test_builder.RenderTests.test_missing_required_id_does_not_leak) ... ok
+test_oversized_rendered_context_raises (test_builder.RenderTests.test_oversized_rendered_context_raises) ... ok
+test_period_provenance (test_builder.RenderTests.test_period_provenance) ... ok
+test_source_provenance (test_builder.RenderTests.test_source_provenance) ... ok
+test_status_rendered (test_builder.RenderTests.test_status_rendered) ... ok
+test_closed_period_not_rejected_by_age (test_builder.SelectionTests.test_closed_period_not_rejected_by_age) ... ok
+test_conflicting_same_version_quarantined (test_builder.SelectionTests.test_conflicting_same_version_quarantined) ... ok
+test_distinct_claim_conflict (test_builder.SelectionTests.test_distinct_claim_conflict) ... ok
+test_empty_text (test_builder.SelectionTests.test_empty_text) ... ok
+test_exact_budget (test_builder.SelectionTests.test_exact_budget) ... ok
+test_happy_path (test_builder.SelectionTests.test_happy_path) ... ok
+test_identical_claim_not_conflict (test_builder.SelectionTests.test_identical_claim_not_conflict) ... ok
+test_identical_duplicate (test_builder.SelectionTests.test_identical_duplicate) ... ok
+test_invalid_policy_budget (test_builder.SelectionTests.test_invalid_policy_budget) ... ok
+test_invalid_policy_periods (test_builder.SelectionTests.test_invalid_policy_periods) ... ok
+test_invalid_relevance (test_builder.SelectionTests.test_invalid_relevance) ... ok
+test_invalid_tokens (test_builder.SelectionTests.test_invalid_tokens) ... ok
+test_invalid_version (test_builder.SelectionTests.test_invalid_version) ... ok
+test_missing_required_absent (test_builder.SelectionTests.test_missing_required_absent) ... ok
+test_newest_version_wins_over_relevance (test_builder.SelectionTests.test_newest_version_wins_over_relevance) ... ok
+test_older_version_excluded (test_builder.SelectionTests.test_older_version_excluded) ... ok
+test_optional_over_budget_explained (test_builder.SelectionTests.test_optional_over_budget_explained) ... ok
+test_relevance_sort (test_builder.SelectionTests.test_relevance_sort) ... ok
+test_required_over_budget_explicit (test_builder.SelectionTests.test_required_over_budget_explicit) ... ok
+test_required_period_missing_even_without_source_id (test_builder.SelectionTests.test_required_period_missing_even_without_source_id) ... ok
+test_required_period_over_budget_even_without_source_id (test_builder.SelectionTests.test_required_period_over_budget_even_without_source_id) ... ok
+test_required_period_unverified (test_builder.SelectionTests.test_required_period_unverified) ... ok
+test_required_prioritized_over_optional (test_builder.SelectionTests.test_required_prioritized_over_optional) ... ok
+test_required_unverified_insufficient (test_builder.SelectionTests.test_required_unverified_insufficient) ... ok
+test_same_version_newer_update_wins (test_builder.SelectionTests.test_same_version_newer_update_wins) ... ok
+test_superseded_rejected (test_builder.SelectionTests.test_superseded_rejected) ... ok
+test_threshold (test_builder.SelectionTests.test_threshold) ... ok
+test_token_metrics (test_builder.SelectionTests.test_token_metrics) ... ok
+test_unauthorized_high_relevance (test_builder.SelectionTests.test_unauthorized_high_relevance) ... ok
+test_unauthorized_removed (test_builder.SelectionTests.test_unauthorized_removed) ... ok
+test_unverified_e_removed (test_builder.SelectionTests.test_unverified_e_removed) ... ok
+test_wrong_period (test_builder.SelectionTests.test_wrong_period) ... ok
+test_yoy_required_periods (test_builder.SelectionTests.test_yoy_required_periods) ... ok
+test_zero_budget (test_builder.SelectionTests.test_zero_budget) ... ok
+test_duplicate_id_rejected (test_builder.ToolStoreTests.test_duplicate_id_rejected) ... ok
+test_empty_id_rejected (test_builder.ToolStoreTests.test_empty_id_rejected) ... ok
+test_externalize_and_reload (test_builder.ToolStoreTests.test_externalize_and_reload) ... ok
+test_unknown_id_rejected (test_builder.ToolStoreTests.test_unknown_id_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 0.002s
+
+OK
