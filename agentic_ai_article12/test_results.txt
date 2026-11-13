@@ -1,0 +1,45 @@
+test_aggregate_conflict (test_demo.DemoTests.test_aggregate_conflict) ... ok
+test_aggregate_failed (test_demo.DemoTests.test_aggregate_failed) ... ok
+test_aggregate_missing (test_demo.DemoTests.test_aggregate_missing) ... ok
+test_aggregate_uncertain (test_demo.DemoTests.test_aggregate_uncertain) ... ok
+test_bad_version (test_demo.DemoTests.test_bad_version) ... ok
+test_caller_scope (test_demo.DemoTests.test_caller_scope) ... ok
+test_churn_fixture (test_demo.DemoTests.test_churn_fixture) ... ok
+test_conflict_fixture_flagged (test_demo.DemoTests.test_conflict_fixture_flagged) ... ok
+test_conflict_record (test_demo.DemoTests.test_conflict_record) ... ok
+test_duplicate (test_demo.DemoTests.test_duplicate) ... ok
+test_duplicate_evidence_id (test_demo.DemoTests.test_duplicate_evidence_id) ... ok
+test_duplicate_tools (test_demo.DemoTests.test_duplicate_tools) ... ok
+test_empty_correlation (test_demo.DemoTests.test_empty_correlation) ... ok
+test_empty_output (test_demo.DemoTests.test_empty_output) ... ok
+test_forged_evidence (test_demo.DemoTests.test_forged_evidence) ... ok
+test_incomplete (test_demo.DemoTests.test_incomplete) ... ok
+test_missing_evidence (test_demo.DemoTests.test_missing_evidence) ... ok
+test_mixed_fixture (test_demo.DemoTests.test_mixed_fixture) ... ok
+test_negative_attempts (test_demo.DemoTests.test_negative_attempts) ... ok
+test_negative_budget (test_demo.DemoTests.test_negative_budget) ... ok
+test_opposing_signed_values_flagged_even_with_pricing (test_demo.DemoTests.test_opposing_signed_values_flagged_even_with_pricing) ... ok
+test_pricing_fixture (test_demo.DemoTests.test_pricing_fixture) ... ok
+test_read_only_without_calculate_denied (test_demo.DemoTests.test_read_only_without_calculate_denied) ... ok
+test_side_effects (test_demo.DemoTests.test_side_effects) ... ok
+test_source_version (test_demo.DemoTests.test_source_version) ... ok
+test_staged_matches_baseline (test_demo.DemoTests.test_staged_matches_baseline) ... ok
+test_success (test_demo.DemoTests.test_success) ... ok
+test_task_id_mismatch (test_demo.DemoTests.test_task_id_mismatch) ... ok
+test_timeout_unknown (test_demo.DemoTests.test_timeout_unknown) ... ok
+test_unauthorized_tool (test_demo.DemoTests.test_unauthorized_tool) ... ok
+test_unknown_id (test_demo.DemoTests.test_unknown_id) ... ok
+test_untrusted (test_demo.DemoTests.test_untrusted) ... ok
+test_verified_trace (test_demo.DemoTests.test_verified_trace) ... ok
+test_worker_cannot_cite_undelegated_evidence (test_demo.DemoTests.test_worker_cannot_cite_undelegated_evidence) ... ok
+test_worker_cannot_duplicate_evidence_ids (test_demo.DemoTests.test_worker_cannot_duplicate_evidence_ids) ... ok
+test_worker_failure (test_demo.DemoTests.test_worker_failure) ... ok
+test_worker_stage_not_parallel (test_demo.DemoTests.test_worker_stage_not_parallel) ... ok
+test_workflow_executes_real_stage_functions (test_demo.DemoTests.test_workflow_executes_real_stage_functions) ... ok
+test_zero_deadline (test_demo.DemoTests.test_zero_deadline) ... ok
+test_zero_tool_allowance_denied_at_execution (test_demo.DemoTests.test_zero_tool_allowance_denied_at_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.001s
+
+OK

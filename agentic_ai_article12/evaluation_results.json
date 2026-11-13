@@ -1,0 +1,188 @@
+[
+  {
+    "dataset": "churn",
+    "single": {
+      "status": "completed",
+      "findings": {
+        "churn": 60,
+        "pricing": 10
+      },
+      "operations": 2
+    },
+    "workflow": {
+      "status": "completed",
+      "findings": {
+        "churn": 60,
+        "pricing": 10
+      },
+      "operations": 2,
+      "stages": [
+        "extract",
+        "analyze",
+        "verify"
+      ]
+    },
+    "supervisor": {
+      "status": "completed",
+      "findings": [
+        {
+          "factor": "churn",
+          "value": 60,
+          "sources": [
+            "E-101"
+          ]
+        },
+        {
+          "factor": "pricing",
+          "value": 10,
+          "sources": [
+            "E-102"
+          ]
+        }
+      ]
+    },
+    "note": "Sequential deterministic functions; no real model inference, parallelism, latency, tokens or accuracy claims."
+  },
+  {
+    "dataset": "pricing",
+    "single": {
+      "status": "completed",
+      "findings": {
+        "churn": 10,
+        "pricing": 70
+      },
+      "operations": 2
+    },
+    "workflow": {
+      "status": "completed",
+      "findings": {
+        "churn": 10,
+        "pricing": 70
+      },
+      "operations": 2,
+      "stages": [
+        "extract",
+        "analyze",
+        "verify"
+      ]
+    },
+    "supervisor": {
+      "status": "completed",
+      "findings": [
+        {
+          "factor": "churn",
+          "value": 10,
+          "sources": [
+            "E-201"
+          ]
+        },
+        {
+          "factor": "pricing",
+          "value": 70,
+          "sources": [
+            "E-202"
+          ]
+        }
+      ]
+    },
+    "note": "Sequential deterministic functions; no real model inference, parallelism, latency, tokens or accuracy claims."
+  },
+  {
+    "dataset": "mixed",
+    "single": {
+      "status": "completed",
+      "findings": {
+        "churn": 40,
+        "pricing": 35
+      },
+      "operations": 2
+    },
+    "workflow": {
+      "status": "completed",
+      "findings": {
+        "churn": 40,
+        "pricing": 35
+      },
+      "operations": 2,
+      "stages": [
+        "extract",
+        "analyze",
+        "verify"
+      ]
+    },
+    "supervisor": {
+      "status": "completed",
+      "findings": [
+        {
+          "factor": "churn",
+          "value": 40,
+          "sources": [
+            "E-301"
+          ]
+        },
+        {
+          "factor": "pricing",
+          "value": 35,
+          "sources": [
+            "E-302"
+          ]
+        }
+      ]
+    },
+    "note": "Sequential deterministic functions; no real model inference, parallelism, latency, tokens or accuracy claims."
+  },
+  {
+    "dataset": "incomplete",
+    "single": {
+      "status": "insufficient_evidence",
+      "findings": {
+        "churn": 30
+      },
+      "operations": 1
+    },
+    "workflow": {
+      "status": "insufficient_evidence",
+      "findings": {
+        "churn": 30
+      },
+      "operations": 1,
+      "stages": [
+        "extract",
+        "analyze",
+        "verify"
+      ]
+    },
+    "supervisor": {
+      "status": "insufficient_evidence",
+      "findings": []
+    },
+    "note": "Sequential deterministic functions; no real model inference, parallelism, latency, tokens or accuracy claims."
+  },
+  {
+    "dataset": "conflict",
+    "single": {
+      "status": "insufficient_evidence",
+      "findings": {
+        "churn": -20
+      },
+      "operations": 2
+    },
+    "workflow": {
+      "status": "insufficient_evidence",
+      "findings": {
+        "churn": -20
+      },
+      "operations": 2,
+      "stages": [
+        "extract",
+        "analyze",
+        "verify"
+      ]
+    },
+    "supervisor": {
+      "status": "conflict",
+      "findings": []
+    },
+    "note": "Sequential deterministic functions; no real model inference, parallelism, latency, tokens or accuracy claims."
+  }
+]
