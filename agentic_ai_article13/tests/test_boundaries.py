@@ -1,0 +1,36 @@
+import unittest
+from protocol_boundary import *
+
+class BoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.p = Principal('caller','tenant-a',frozenset({'read:revenue','delegate:analysis'}))
+        self.cap = Capability('read_revenue','read:revenue','tenant-a')
+        self.ev = Evidence('finance.csv','tenant-a',True,3.0)
+        self.d = Delegation('task-1','tenant-a','pricing',2)
+    def test_mcp_success(self): self.assertEqual(use_mcp_capability(self.p,self.cap,self.ev).outcome,Outcome.COMPLETED)
+    def test_mcp_wrong_tenant(self): self.assertEqual(use_mcp_capability(self.p,Capability('read','read:revenue','tenant-b'),self.ev).outcome,Outcome.BLOCKED)
+    def test_mcp_evidence_tenant(self): self.assertEqual(use_mcp_capability(self.p,self.cap,Evidence('s','tenant-b',True,1)).outcome,Outcome.BLOCKED)
+    def test_mcp_permission(self): self.assertEqual(use_mcp_capability(Principal('caller','tenant-a',frozenset()),self.cap,self.ev).outcome,Outcome.BLOCKED)
+    def test_mcp_unverified(self): self.assertEqual(use_mcp_capability(self.p,self.cap,Evidence('s','tenant-a',False,1)).outcome,Outcome.INSUFFICIENT_EVIDENCE)
+    def test_mcp_missing_source(self): self.assertEqual(use_mcp_capability(self.p,self.cap,Evidence('','tenant-a',True,1)).outcome,Outcome.INSUFFICIENT_EVIDENCE)
+    def test_a2a_success(self): self.assertEqual(delegate_a2a_task(self.p,self.d,frozenset({'pricing'}),frozenset()).outcome,Outcome.AUTHORIZED)
+    def test_a2a_wrong_tenant(self): self.assertEqual(delegate_a2a_task(self.p,Delegation('task-1','tenant-b','pricing',2),frozenset({'pricing'}),frozenset()).outcome,Outcome.BLOCKED)
+    def test_a2a_unauthorized_target(self): self.assertEqual(delegate_a2a_task(self.p,self.d,frozenset({'other'}),frozenset()).outcome,Outcome.BLOCKED)
+    def test_a2a_no_permission(self): self.assertEqual(delegate_a2a_task(Principal('caller','tenant-a',frozenset()),self.d,frozenset({'pricing'}),frozenset()).outcome,Outcome.BLOCKED)
+    def test_a2a_budget(self): self.assertEqual(delegate_a2a_task(self.p,Delegation('task-1','tenant-a','pricing',0),frozenset({'pricing'}),frozenset()).outcome,Outcome.BLOCKED)
+    def test_a2a_duplicate(self): self.assertEqual(delegate_a2a_task(self.p,self.d,frozenset({'pricing'}),frozenset({'task-1'})).outcome,Outcome.DUPLICATE_TASK)
+    def test_timeout_unknown(self): self.assertEqual(classify_transport_outcome(False,True,False).outcome,Outcome.OUTCOME_UNKNOWN)
+    def test_ack_not_completion(self): self.assertEqual(classify_transport_outcome(True,False,False).outcome,Outcome.INSUFFICIENT_EVIDENCE)
+    def test_verified_result(self): self.assertEqual(classify_transport_outcome(False,True,True).outcome,Outcome.COMPLETED)
+    def test_missing_ack(self): self.assertEqual(classify_transport_outcome(False,False,False).outcome,Outcome.OUTCOME_UNKNOWN)
+    def test_known_execution_error(self): self.assertEqual(classify_transport_outcome(False,False,False, execution_error=True).outcome, Outcome.FAILED)
+    def test_unresolved_task_blocks_redispatch(self): self.assertEqual(delegate_a2a_task(self.p,self.d,frozenset({'pricing'}),frozenset(),frozenset({'task-1'})).outcome, Outcome.OUTCOME_UNKNOWN)
+    def test_whitespace_principal_blocked_mcp(self): self.assertEqual(use_mcp_capability(Principal('  ','tenant-a',self.p.permissions),self.cap,self.ev).outcome,Outcome.BLOCKED)
+    def test_blank_tenant_blocked_mcp(self): self.assertEqual(use_mcp_capability(Principal('caller','',self.p.permissions),Capability('r','read:revenue',''),Evidence('finance.csv','',True,1)).outcome,Outcome.BLOCKED)
+    def test_blank_tenant_blocked_a2a(self): self.assertEqual(delegate_a2a_task(Principal('caller','',self.p.permissions), Delegation('task-1','','pricing',2),frozenset({'pricing'}),frozenset()).outcome,Outcome.BLOCKED)
+    def test_whitespace_subject_blocked_a2a(self): self.assertEqual(delegate_a2a_task(Principal('   ','tenant-a',self.p.permissions),self.d,frozenset({'pricing'}),frozenset()).outcome,Outcome.BLOCKED)
+    def test_conflicting_findings(self): self.assertEqual(compare_findings('finance',10.0,'pricing',8.0).outcome,Outcome.CONFLICT)
+    def test_matching_findings(self): self.assertEqual(compare_findings('finance',10.0,'pricing',10.0).outcome,Outcome.COMPLETED)
+    def test_blank_evidence_source(self): self.assertEqual(use_mcp_capability(self.p,self.cap,Evidence('  ','tenant-a',True,1)).outcome,Outcome.INSUFFICIENT_EVIDENCE)
+
+if __name__ == '__main__': unittest.main()
